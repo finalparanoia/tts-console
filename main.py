@@ -74,4 +74,5 @@ while True:
         exit_flag = True
         break
     file_name = gen_audio(text)
-    voice_seq.append(f"../unitts/"+file_name.replace('"', ""))
+    if type(file_name) == str:
+        voice_seq.append(f"../unitts/"+file_name.replace('"', ""))
